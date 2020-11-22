@@ -85,7 +85,6 @@ const useStyles = makeStyles((theme) => ({
          style={{   color:"#ffffff"}} >
           <Tab label="About" {...a11yProps(0)}xs={2} />
           <Tab label="Experience" {...a11yProps(1)} xs={2} />
-          <Tab label="Projects" {...a11yProps(2)} />
           <Tab label="Education" {...a11yProps(3)} />
           
         </Tabs>
@@ -157,13 +156,6 @@ const useStyles = makeStyles((theme) => ({
       </Paper>
       </TabPanel>
       <TabPanel value={value} index={2} >
-      <Paper elevation={0} className="about" >
-        <h3 style={{marginLeft:"1%"}}>Projects :</h3>
-        <p  style={{margin:"1%"}}>Kindly check my GitHub account: <a href=" https://github.com/esmatbh?tab=repositories">Projects</a> </p>
-      </Paper>
-      </TabPanel>
-
-      <TabPanel value={value} index={3} >
       <Paper elevation={0} className="about" >
         <h3 style={{marginLeft:"1%"}}>Education :</h3>
         <ul>

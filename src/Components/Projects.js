@@ -1,6 +1,6 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import  {Card,CardActionArea,CardActions,CardContent,CardMedia,Button,Typography, Box}from '@material-ui/core';
+import  {Card,CardActionArea,CardActions,CardContent,CardMedia,Button,Typography, Box,Link}from '@material-ui/core';
 import Navebar from "./Navebar"
 import Grid from '@material-ui/core/Grid'
 
@@ -17,8 +17,10 @@ const useStyles = makeStyles({
   }
 });
 
-const projects=['Shopping using HTML & CSS & JavaScript', 'Shopping using React-Redux',
-'Hotel website using React-redux',"Portfolio using React-Material UI"]
+const projects=[{name:'Shopping using HTML & CSS & JavaScript',link:"https://github.com/esmatbh/Shopping-Cart-Using-Vanilla-JavaScript"},
+ {name:'Shopping using React-Redux', link :"https://github.com/esmatbh/Shopping-Cart-using-React-Redux"},
+{name:'Hotel website using React-redux',link:"https://github.com/esmatbh/Beach-Resort-using-React-Redux"},
+{name:"Portfolio using React-Material UI",link:"https://github.com/esmatbh/Portfolio-Using-React-Material-UI"}]
 const Projects=()=> {
   const classes = useStyles();
 
@@ -46,7 +48,7 @@ const Projects=()=> {
               />
               <CardContent>
                 <Typography gutterBottom variant="h5" component="h2">
-                  {item}
+                  {item.name}
                 </Typography>
                 <Typography variant="body2" color="textSecondary" component="p">
                   Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
@@ -55,12 +57,9 @@ const Projects=()=> {
               </CardContent>
             </CardActionArea>
             <CardActions>
-              <Button size="small" color="primary">
-                Share
-              </Button>
-              <Button size="small" color="primary">
-                Learn More
-              </Button>
+              
+              
+              <a href={item.link} target="_blank" style={{textDecoration:"none",fontWeight:"bold"}}>Go To GitHub</a>
             </CardActions>
           </Card>
            </Grid>
